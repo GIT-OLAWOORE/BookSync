@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <style>
+    .font-heading {
+      font-family: "Merriweather", serif;
+    }
+    .font-card {
+      font-family: "Inter", sans-serif;
+    }
+    body {
+      font-family: inter, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1b253a; /* Dark background */
+      color: #edf2f7; /* Light text color */
+    }
+  </style>
+  <body class="transition">
+    <header class="fixed top-0 left-0 right-0 h-max-content z-50">
+      <div
+        class="flex gap-10 items-center justify-between bg-gray-900 p-4 mb-4"
+      >
+        <h1
+          class="text-2xl font-heading font-bold hidden md:block text-gray-100"
+        >
+          BookSync
+        </h1>
+        <input
+          type="text"
+          class="flex bg-gray-800 border border-gray-200 p-2 text-sm font-normal rounded h-10 outline-white flex-1 text-gray-100 shadow-sm py-6 px-4 w-0"
+          placeholder="Search books, authors or titles"
+          id="inputField"
+        />
+      </div>
+    </header>
+
+    <main class="flex items-center">
+      <div class="mt-20 p-4 max-w-7xl mx-auto">
+        <div
+          id="bookList"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <!-- Book items will be dynamically inserted here -->
+          <div
+            class="max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition"
+          >
+            <p class="text-sm text-white dark:text-gray-400 flex flex-col md:flex-1">
+              Your Search result will show here,
+              <span class="italic text-center">Press Enter key to Search</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <section>
+      
+      <p>Random</p>
+    </section> -->
+    <footer
+      class="fixed bottom-2 right-0 left-0 text-sm text-gray-200 font-card backdrop-blur bg-gray-900/40 font-normal border-t border-b border-gray-600 shadow-md"
+    >
+      <p class="text-center py-3">Everbest &copy; 2025</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
