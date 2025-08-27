@@ -22,8 +22,8 @@
       font-family: inter, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #1b253a; /* Dark background */
-      color: #edf2f7; /* Light text color */
+      background-color: #1b253a;
+      color: #edf2f7;
     }
   </style>
   <body class="transition">
@@ -46,16 +46,17 @@
     </header>
 
     <main class="flex items-center">
-      <div class="mt-20 p-4 max-w-7xl mx-auto">
+      <div class="mt-20 mb-20 p-4 max-w-7xl mx-auto">
         <div
           id="bookList"
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
-          <!-- Book items will be dynamically inserted here -->
           <div
             class="max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition"
           >
-            <p class="text-sm text-white dark:text-gray-400 flex flex-col md:flex-1">
+            <p
+              class="text-sm text-white dark:text-gray-400 flex flex-col md:flex-1"
+            >
               Your Search result will show here,
               <span class="italic text-center">Press Enter key to Search</span>
             </p>
