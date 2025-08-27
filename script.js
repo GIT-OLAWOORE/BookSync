@@ -63,11 +63,16 @@ function getSearch() {
             <p class="font-card text-sm text-gray-600 dark:text-gray-300">  
               Pages: ${book.volumeInfo.pageCount} | 
             Published: ${
-                book.volumeInfo.publishedDate
-                  ? book.volumeInfo.publishedDate
-                  : "N/A"
-              }
+              book.volumeInfo.publishedDate
+                ? book.volumeInfo.publishedDate
+                : "N/A"
+            }
             </p>
+            ${
+              book.volumeInfo.previewLink
+                ? `:<p class="font-card text-sm text-gray-600 dark:text-gray-300 break-words w-full" font-card>Read here: ${book.volumeInfo.previewLink}</p>`
+                : ""
+            }
       `;
             bookDiv.appendChild(card);
 
