@@ -70,7 +70,7 @@ function getSearch() {
             </p>
             ${
               book.volumeInfo.previewLink
-                ? `:<p class="font-card text-sm text-gray-600 dark:text-gray-300 break-words w-full" font-card>Read here: ${book.volumeInfo.previewLink}</p>`
+                ? `<p class="font-card text-sm text-gray-600 dark:text-gray-500 break-words w-full font-card italic">Read here: <a href="${book.volumeInfo.previewLink}">${book.volumeInfo.previewLink}</a></p>`
                 : ""
             }
       `;
