@@ -14,11 +14,11 @@ function getSearch() {
         </div>
       `;
 
-      //   userinput as apirequest
+      // lemme collect  userinput as apirequest
       const request = queryValue;
-      const apiKey = "AIzaSyAj4CL_VJkXO6lwLwfXTzuDqXr_Hxe-sJM";
+      // const apiKey = "AIzaSyAj4CL_VJkXO6lwLwfXTzuDqXr_Hxe-sJM"; i no need ham now
       fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${request}&maxResults=40&key=${apiKey}`
+        `https://www.googleapis.com/books/v1/volumes?q=${request}&maxResults=40`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -27,9 +27,12 @@ function getSearch() {
           bookDiv.innerHTML = "";
           all.forEach((book, index) => {
             console.log(book);
+            // chooo, e log, mk i create the cards tmr
             const card = document.createElement("div");
+            // ai suggestion start
             card.setAttribute("data-aos", "zoom-in-down");
             card.setAttribute("data-aos-duration", "3000");
+            //ai suggestion end
             card.className =
               "relative max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition h-max  md:h-auto";
             card.innerHTML = `
@@ -78,6 +81,7 @@ function getSearch() {
       `;
             bookDiv.appendChild(card);
           });
+          // ai suggestion shit
           AOS.refresh();
         })
         .catch((err) => {
