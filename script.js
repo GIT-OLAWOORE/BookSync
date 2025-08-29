@@ -29,6 +29,7 @@ function getSearch() {
             console.log(book);
             const card = document.createElement("div");
             card.setAttribute("data-aos", "zoom-in-down");
+            card.setAttribute("data-aos-duration", "3000");
             card.className =
               "relative max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition h-max  md:h-auto";
             card.innerHTML = `
