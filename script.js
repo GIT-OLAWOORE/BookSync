@@ -28,8 +28,7 @@ function getSearch() {
           all.forEach((book, index) => {
             console.log(book);
             const card = document.createElement("div");
-            card.setAttribute("data-aos", "fade-up");
-            card.setAttribute("data-aos-duration", "3000");
+            card.setAttribute("data-aos", "zoom-in-down");
             card.className =
               "relative max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition h-max  md:h-auto";
             card.innerHTML = `
