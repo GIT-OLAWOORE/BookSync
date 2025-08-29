@@ -50,7 +50,7 @@ function getSearch() {
               ${book.volumeInfo.title}
               ${
                 book.volumeInfo.subtitle
-                  ? `:<span class="italic text-sm text-gray-500 dark:text-gray-400" font-card> ${book.volumeInfo.subtitle}</span>`
+                  ? `:<span class="italic text-sm text-gray-500 dark:text-gray-400 font-card"> ${book.volumeInfo.subtitle}</span>`
                   : ""
               }
             </h2>
@@ -76,12 +76,8 @@ function getSearch() {
             }
       `;
             bookDiv.appendChild(card);
-
-            // console.log(book.volumeInfo.subtitle);
-            // console.log(book.volumeInfo.authors);
-            // console.log(book.volumeInfo.publishedDate);
-            // console.log(book.volumeInfo.imageLinks?.thumbnail);
           });
+          AOS.refresh();
         })
         .catch((err) => {
           console.error("Error fetching data:", err);
