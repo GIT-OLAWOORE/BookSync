@@ -25,14 +25,16 @@ function getSearch() {
           console.log(data);
           const all = data.items;
           bookDiv.innerHTML = "";
-          all.forEach((book) => {
+          all.forEach((book, index) => {
             console.log(book);
             const card = document.createElement("div");
+            card.setAttribute("data-aos", "fade-up");
+            card.setAttribute("data-aos-duration", "3000");
             card.className =
               "relative max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition h-max  md:h-auto";
             card.innerHTML = `
                     <div class="bg-red-900/80 backdrop-blur rounded-sm text-gray-100 text-sm font-card py-1 px-2 absolute top-5 right-5 shadow-sm">
-      #${all.indexOf(book) + 1}
+      #${index + 1}
     </div>
             ${
               book.volumeInfo.imageLinks

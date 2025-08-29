@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <style>
@@ -27,12 +28,16 @@
     }
   </style>
   <body class="transition">
-    <header class="fixed top-0 left-0 right-0 h-max-content z-50">
+    <header
+      class="fixed top-0 left-0 right-0 h-max-content z-50"
+      data-aos="fade-down"
+    >
       <div
         class="flex gap-10 items-center justify-between bg-gray-900 p-4 mb-4"
       >
         <h1
           class="text-2xl font-heading font-bold hidden md:block text-gray-100"
+          data-aos="fade-right"
         >
           BookSync
         </h1>
@@ -41,6 +46,7 @@
           class="flex bg-gray-800 border border-gray-200 p-2 text-sm font-normal rounded h-10 outline-white flex-1 text-gray-100 shadow-sm py-6 px-4 w-0"
           placeholder="Search books, authors or titles"
           id="inputField"
+          data-aos="fade-left"
         />
       </div>
     </header>
@@ -48,10 +54,13 @@
     <main class="flex items-center">
       <div class="mt-20 mb-20 p-4 max-w-7xl mx-auto">
         <div
+          data-aos="zoom-in-down"
           id="bookList"
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         >
           <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
             class="max-w-xs bg-white dark:bg-gray-900 shadow-md rounded-2xl p-4 hover:shadow-lg transition"
           >
             <p
@@ -74,5 +83,11 @@
       <p class="text-center py-3">Everbest &copy; 2025</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: false,
+      });
+    </script>
   </body>
 </html>
