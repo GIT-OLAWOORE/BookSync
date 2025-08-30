@@ -16,9 +16,9 @@ function getSearch() {
 
       // lemme collect  userinput as apirequest
       const request = queryValue;
-      // const apiKey = "AIzaSyAj4CL_VJkXO6lwLwfXTzuDqXr_Hxe-sJM"; i no need ham now
+      //
       fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${request}&maxResults=40`
+        `https://www.googleapis.com/books/v1/volumes?q=${request}&maxResults=40&key=${CONFIG.API_KEY}`
       )
         .then((res) => res.json())
         .then((data) => {
